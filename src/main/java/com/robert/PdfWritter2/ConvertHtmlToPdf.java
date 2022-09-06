@@ -1,6 +1,5 @@
 package com.robert.PdfWritter2;
 
-import org.apache.catalina.webresources.FileResource;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.springframework.boot.CommandLineRunner;
@@ -41,15 +40,10 @@ public class ConvertHtmlToPdf implements CommandLineRunner {
 
             FontResolver resolver = renderer.getFontResolver();
 
-            Resource fontresource = new ClassPathResource("fonts/Pts55f.ttf");
-            renderer.getFontResolver().addFont(fontresource.getFile().getAbsolutePath(), true);
 
             renderer.setDocumentFromString(parseHtml().html(), baseUrl);
             renderer.layout();
             renderer.createPDF(outputStream);
-
-
-
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

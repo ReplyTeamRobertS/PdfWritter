@@ -1,16 +1,25 @@
-table, th, td {
-  border: 1px solid;
-  font-family: UniCredit;
-}
 table {
+  border-collapse: collapse;
   width: 100%;
 }
 
-@font-face {
-  font-family: UniCredit;
-  src: url(CambriaItalic400.ttf);
+th, td {
+  text-align: left;
+  padding: 8px;
 }
 
-div {
-  font-family: UniCredit;
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+@page {
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+   @bottom-left {
+      content: "Customer name: Robert S. & Andrei";
+    }
 }
