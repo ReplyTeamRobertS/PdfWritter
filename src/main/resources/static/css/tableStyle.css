@@ -1,0 +1,16 @@
+table, th, td {
+  border: 1px solid;
+  font-family: UniCredit;
+}
+table {
+  width: 100%;
+}
+
+@font-face {
+  font-family: UniCredit;
+  src: url(CambriaItalic400.ttf);
+}
+
+div {
+  font-family: UniCredit;
+}
