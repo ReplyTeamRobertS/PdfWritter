@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.PdfWritter2.PdfWritter2ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.144 s - in com.PdfWritter2.PdfWritter2ApplicationTests
