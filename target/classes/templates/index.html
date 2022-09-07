@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="./static/css/table.css"/>
+    <link rel="stylesheet" href="./static/css/footer.css"/>
+    <link rel="stylesheet" href="./static/css/div.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>
+    <div>
+        <img src="./images/icons8-environment-64.png" style="margin-left:0%;margin-top:5%"/>
+    </div>
+    <div class="textPos" style='float:left'>
+        having one of them float left and the other right placed them all the way at the far left and right of the screen. But at least they were on the same level, so I changed the table to float right. –
+        ethio
+        Feb 11, 2013 at 17:12
+        For the future readers i have edited the answer to align image and Headers to left –
+        Garry
+        Mar 14, 2017 at 17:02
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col"><p th:text="#{company}"></p></th>
+            <th scope="col"><p th:text="#{contact}"></p></th>
+            <th scope="col"><p th:text="#{country}"></p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee : ${employeeList}">
+            <td th:text="${employee.company}"></td>
+            <td th:text="${employee.contact}"></td>
+            <td th:text="${employee.country}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+<div class="footer" th:text="${customerName}">
+</div>
+
+</body>
+</html>

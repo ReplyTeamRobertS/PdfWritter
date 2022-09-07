@@ -1,0 +1,20 @@
+
+div.footer {
+                display: block;
+                text-align: left;
+                position: running(footer);
+
+            }
+
+    @page {
+                size: A4 portrait;
+                @bottom-right {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+                @bottom-left {
+                     content: "Customer name: " element(footer);
+
+                }
+                counter-increment: page;
+                counter-reset: page 1;
+            }
